@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            JavaScipt 2020
+        </title>
+    </head>
+    <body>
+        <div id="app">
+            <button onclick=pressionaB()>
+                BOTAO PARA PRESSIONAR
+            </button>
+            <button onclick=perigo()>
+                BOTAO PARA NÃO PRESSIONAR
+            </button>
+        </div>
+        <script>
+            function pressionaB(){
+                alert("Botão pressionado");
+            }
+            function perigo(){
+                alert("Botão crítico");
+            }
+        </script>
+    </body>
+</html>
