@@ -13,6 +13,11 @@
             <button onclick=perigo()>
                 BOTAO PARA NÃO PRESSIONAR
             </button>
+            <button onmouseover=detecta_mouse()>
+                BOTAO ARMADILHA
+            </button>
+           
+           
         </div>
         <script>
             function pressionaB(){
@@ -21,6 +26,10 @@
             function perigo(){
                 alert("Botão crítico");
             }
+            function detecta_mouse(){
+                alert('Mouse detectado');
+            }
+           
         </script>
     </body>
 </html>
