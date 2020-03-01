@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>User</title>
+    </head>
+    <body>
+        <div>
+            <input type="Text" name="name">
+            <input type="Number" name="yearsold">
+            <input type="Number" name="height">
+            <button class="User"> User presentation</button>
+        </div>
+        <script>
+            var user = document.querySelector("input[name=name]");
+            var birth = document.querySelector("input[name=yearsold]");
+            var height = document.querySelector("input[name=height]");
+            var Buttonelement = document.querySelector("button.User");
+            Buttonelement.onclick = function(){
+                var presentation = user.value + " has " + 
+                birth.value + " years old and also has " + height.value + " as height";
+                
+                alert(presentation);
+               
+            }
+        </script>
+    </body>
+</html>
