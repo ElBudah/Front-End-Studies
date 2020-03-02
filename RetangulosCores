@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Alterando Estilos Novo Emprego
+        </title>
+        <body>
+            <div id="app">
+                <div class="box"></div>
+                
+            </div>
+
+            <div id="app2">
+                <div class="box"></div>
+            </div>
+
+            <div id="app3">
+                <div class="box"></div>
+                
+            </div>
+            <div id="app4">
+                <div class="box">
+            </div>
+            <script>
+                var boxElement = document.querySelector('.box');
+                boxElement.style.width = 50;
+                boxElement.style.height = 70;
+                boxElement.style.backgroundColor = '#b34';
+                boxElement.onclick = function(){
+                    alert("User 1 skill level");
+                }
+
+                var box2 = document.querySelector("#app2");
+                box2.style.width = 90;
+                box2.style.height = 70;
+                box2.borderRadius = 60;
+                box2.style.backgroundColor = "#04B404";
+                box2.onclick = function(){
+                    alert("User 2 skill level");
+                }
+
+                var box3 = document.querySelector("#app3");
+                box3.style.width = 130;
+                box3.style.height = 70;
+                box3.style.backgroundColor = "#013ADF";
+                box3.onclick = function(){
+                    alert("User 3 skill level")
+                }
+
+                var box4 = document.querySelector("#app4");
+                box4.style.width = 150;
+                box4.style.height = 70;
+                box4.style.backgroundColor = "#2ECCFA";
+                box4.onclick = function(){
+                    alert("User 4 skill level");
+                }
+            </script>
+        </body>
+    </head>
+</html>
