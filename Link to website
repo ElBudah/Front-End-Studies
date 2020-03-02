@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            Our Planet View
+        </title>
+    </head>
+    <body>
+        <div id="app">
+
+        </div>
+        <script>
+            var linkelement = document.createElement('a'); // a possibilita gerar um link e não apenas uma frase
+            linkelement.setAttribute("href","https://google.com.br/intl/pt-BR/earth/"); // endereço que o usuário será direcionado
+
+            var visualelement = document.createTextNode("Click Here to See Our Home"); // nome do link que o usuário verá
+            linkelement.appendChild(visualelement);
+
+            var place = document.querySelector("#app"); // local onde o link está presente
+            place.appendChild(linkelement);
+        </script>
+    </body>
+</html>
