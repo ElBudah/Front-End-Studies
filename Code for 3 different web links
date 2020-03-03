@@ -1,0 +1,34 @@
+<html>
+    <head>
+    </head>
+    <body>
+    <h1> In this project will be shown some links</h1>
+    <p>In the next lines will be shown three different links</p>
+    <p id="first"> </p>
+    <p id="second"> </p>
+    <p id="third"></p>
+    <script>
+        var link1 = document.createElement("a");
+        link1.setAttribute("href","http://infomoney.com.br");
+        var link2 = document.createElement("a");
+        link2.setAttribute("href", "http://forbes.com");
+        var link3 = document.createElement("a");
+        link3.setAttribute("href","http://discoverychannel.com");
+
+        var text1 = document.createTextNode("Link to Investors");
+        link1.appendChild(text1);
+        var text2 = document.createTextNode("Link to Enterprenuer");
+        link2.appendChild(text2);
+        var text3 = document.createTextNode("Link to Discover");
+        link3.appendChild(text3);
+
+        var pos1 = document.querySelector("#first");
+        pos1.appendChild(link1);       
+        var pos2 = document.querySelector("#second");
+        pos2.appendChild(link2);
+        var pos3 = document.querySelector("#third");
+        pos3.appendChild(link3);
+  
+    </script>
+    </body>
+</html>
