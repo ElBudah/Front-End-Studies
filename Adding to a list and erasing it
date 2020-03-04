@@ -24,11 +24,9 @@ function add_tasks(){
     show_tasks();
 }
 function erase_all(){
-    var i = 0;
-    while (i<100)
+      while (tasks.lenght != 0)
     {
         tasks.pop();
-        i++;
     }
     show_tasks();
 }
