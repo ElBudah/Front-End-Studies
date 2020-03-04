@@ -1,52 +1,82 @@
 //---------------------------------------------JS Code  //----------------------------------------------------
 
-var list = document.querySelector("#try ul");
-var input_element = document.querySelector("#try input");
-var button_1 = document.querySelector("#try #add");
-var button_2 = document.querySelector("#try #erase_all")
+var list = document.querySelector("#first ul");
+var input = document.querySelector("#first input");
+var save_quantity = document.querySelector('#second input');
+var btnadd = document.querySelector("#first #add");
+var btner = document.querySelector("#first #er");
 
 var tasks = [];
 
-function show_tasks(){
-    list.innerHTML = "";
-    for(items of tasks){
+function showtasks(){
+    list.innerHTML = '';
+    for(task of tasks){
         var element = document.createElement("li");
-        var name = document.createTextNode(items);
+        var name_element = document.createTextNode(task);
 
-        element.appendChild(name);
+        element.appendChild(name_element);
         list.appendChild(element);
+    }  
+}
+
+showtasks();
+
+function addtasks(){
+    if (input.value < 0 || input.value >= 0 ){
+        alert("Please, type a text");
+        input.value ='';
+    }else{
+        if ( input.value == ''){     
+            alert("Invalid input. Please type something");
+        }
+        else if( tasks.length == 10){
+            alert("List is already with too much items!");
+        }
+        else{
+                var new_task = input.value;
+                tasks.push(new_task);
+                input.value = "";
+                showtasks();
+        }       
     }
-}
-function add_tasks(){
-    var new_name = input_element.value;
-    tasks.push(new_name);
-    input_element.value = '';
-    show_tasks();
-}
-function erase_all(){
-      while (tasks.lenght != 0)
-    {
+
+    }
+    
+btnadd.onclick = addtasks;
+
+function ertask(){
+    var quantity = save_quantity.value;
+    while(tasks.length > quantity){ 
         tasks.pop();
     }
-    show_tasks();
+    showtasks();
+    save_quantity.value = '';
 }
-button_1.onclick = add_tasks;
-button_2.onclick = erase_all;
+btner.onclick = ertask;
+
 
   //-------------------------------------------------- HTML Code  //-----------------------------------------------------------
 
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>New Project List </title>
+
     </head>
     <body>
-        <div id="try">
-            <ul></ul>
-            <input type="text" placeholder="Type here your task">
-            <button id="add">Add button</button>
-            <button id="erase_all">Erase All </button>
+        <div id="first">
+            <ul>
+
+            </ul>
+            <input type="text" placeholder="Type new task">
+            
+            <button id="add"> Add</button>
+            <button id="er">Erase</button>
         </div>
-        <script src="k2.js"></script>
+        <div2 id="second">
+            <input type="number" placeholder="Type how many tasks do you want to keep">
+            
+        </div2>
+        <script src="List.js">
+
+        </script>
     </body>
 </html>
