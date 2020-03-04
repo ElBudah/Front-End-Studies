@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="ff">          
+        </div>
+    
+        <div2 id="rr">
+        </div4>        
+       
+        <script>
+            var text = [
+                "...And then he woke up at his room and took a look around",
+                " knowing that the worst had passed."
+            ];
+
+            var text2 = [
+                "After carefully studying the case, the lawyer had conclued that",
+                " his customer was able to win the case in court."
+            ];
+            
+            var element = document.createElement("object");
+            var name_text = document.createTextNode(text);
+            var pos1 = document.querySelector("#ff");
+
+            var element2 = document.createElement("object");
+            var name_text2 = document.createTextNode(text2);
+            var pos2 = document.querySelector("#rr");
+
+            element.appendChild(name_text);
+            pos1.appendChild(element);
+
+            element2.appendChild(name_text2);
+            pos2.appendChild(element2);
+
+        </script>
+    </body>
+</html>
