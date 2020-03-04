@@ -1,0 +1,54 @@
+//---------------------------------------------JS Code  //----------------------------------------------------
+
+var list = document.querySelector("#try ul");
+var input_element = document.querySelector("#try input");
+var button_1 = document.querySelector("#try #add");
+var button_2 = document.querySelector("#try #erase_all")
+
+var tasks = [];
+
+function show_tasks(){
+    list.innerHTML = "";
+    for(items of tasks){
+        var element = document.createElement("li");
+        var name = document.createTextNode(items);
+
+        element.appendChild(name);
+        list.appendChild(element);
+    }
+}
+function add_tasks(){
+    var new_name = input_element.value;
+    tasks.push(new_name);
+    input_element.value = '';
+    show_tasks();
+}
+function erase_all(){
+    var i = 0;
+    while (i<100)
+    {
+        tasks.pop();
+        i++;
+    }
+    show_tasks();
+}
+button_1.onclick = add_tasks;
+button_2.onclick = erase_all;
+
+  //-------------------------------------------------- HTML Code  //-----------------------------------------------------------
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>New Project List </title>
+    </head>
+    <body>
+        <div id="try">
+            <ul></ul>
+            <input type="text" placeholder="Type here your task">
+            <button id="add">Add button</button>
+            <button id="erase_all">Erase All </button>
+        </div>
+        <script src="k2.js"></script>
+    </body>
+</html>
