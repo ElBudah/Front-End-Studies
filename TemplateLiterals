@@ -1,0 +1,15 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <script>
+            const name = "Ricardo";
+            const age = 26;
+            const profession = "front-end programmer";
+           
+            console.log(`${name} is the name of the user and his age if ${age}`);
+        </script>
+    </body>
+</html>
